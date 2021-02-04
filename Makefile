@@ -393,7 +393,9 @@ else
 	if [ -f target/release/libwasmer_c_api.so ]; then \
 		cp target/release/libwasmer_c_api.so package/lib/libwasmer.so ;\
 	fi;
-	cp target/release/libwasmer_c_api.a package/lib/libwasmer.a
+	if [ -f target/release/libwasmer_c_api.a ]; then \
+		cp target/release/libwasmer_c_api.a package/lib/libwasmer.a ;\
+	fi;
 endif
 endif
 
